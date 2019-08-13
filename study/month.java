@@ -1,4 +1,4 @@
-package step1;
+package study;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 

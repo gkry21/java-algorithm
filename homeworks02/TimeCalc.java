@@ -1,36 +1,58 @@
 /*
- * To.ê°œë°œìë‹˜ê»˜
-ì´ˆë‹¨ìœ„ë¡œ ì•Œë ¤ì£¼ëŠ” ì‹œí—˜ì´ ìˆëŠ”ë°
-ì´ ê°’ì„ ëª‡ì‹œê°„ ëª‡ë¶„ ëª‡ì´ˆì¸ì§€ ê³„ì† ê³„ì‚°í•´ì•¼ í•´ì„œìš”.
-í˜¹ì‹œ ì´ˆê°’ì„ ì…ë ¥ë°›ìœ¼ë©´ ìë™ìœ¼ë¡œ ê³„ì‚°ë˜ëŠ” í”„ë¡œê·¸ë¨ì„ ë§Œë“¤ì–´ ì¤„ ìˆ˜ ìˆì„ê¹Œìš”?
-ê·¸ëŸ¬ë‹ˆê¹Œ 500ì´ˆ ì´ë©´ ë­ ëª‡ì‹œê°„ ëª‡ë¶„ ëª‡ì´ˆë¼ê³  ë³´ì—¬ì£¼ë©´ ì¢‹ê² ì£ .  for /
-i / 60 
+
+ * To.°³¹ßÀÚ´Ô²²
+
+ÃÊ´ÜÀ§·Î ¾Ë·ÁÁÖ´Â ½ÃÇèÀÌ ÀÖ´Âµ¥
+
+ÀÌ °ªÀ» ¸î½Ã°£ ¸îºĞ ¸îÃÊÀÎÁö °è¼Ó °è»êÇØ¾ß ÇØ¼­¿ä.
+
+È¤½Ã ÃÊ°ªÀ» ÀÔ·Â¹ŞÀ¸¸é ÀÚµ¿À¸·Î °è»êµÇ´Â ÇÁ·Î±×·¥À» ¸¸µé¾î ÁÙ ¼ö ÀÖÀ»±î¿ä?
+
+±×·¯´Ï±î 500ÃÊ ÀÌ¸é ¹¹ ¸î½Ã°£ ¸îºĞ ¸îÃÊ¶ó°í º¸¿©ÁÖ¸é ÁÁ°ÚÁÒ.
+
+ 
 
  */
-package homeworks02;
+
+package HomeWorks02;
+
+ 
+
 import java.util.Scanner;
-import java.util.Date;
-import java.text.SimpleDateFormat;
 
 
 public class TimeCalc {
-	
+
+ 
+
 	public static void main(String[] args) {
-	Scanner scanner = new Scanner(System.in);
-	Date date = new Date();
-	SimpleDateFormat sdf = new SimpleDateFormat("hh ì‹œê°„ mmë¶„ ssì´ˆ");
-	System.out.println("ì´ˆë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤");
-	int sec = scanner.nextInt();
-	String now = sdf.format(sec);
-	String sequence = "";
-	int series = 0;
-	int hour = 0;
-	/*for (int i=1;i<=500; i++) {
-		if(i==60) {
-			sequence = i +"ë¶„";
-		} else if(i!=60) {
-			sequence = i + "ì´ˆ";
-		} else {} */
-	System.out.println(now);
+
+	Scanner scan = new Scanner(System.in);
+
+	System.out.println("ÃÊ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+
+	
+
+	int sec = scan.nextInt();
+
+	int hh = 0;
+
+	int mm = 0;
+
+	int ss = 0;
+
+	
+
+	mm= sec / 60;
+
+	ss = sec - (mm*60);
+
+	hh = mm / 60;
+
+	mm =  mm - (hh*60);
+
+	System.out.println(hh + "½Ã°£" + mm + "ºĞ" + ss + "ÃÊ");
+
 	}
-	}
+
+}

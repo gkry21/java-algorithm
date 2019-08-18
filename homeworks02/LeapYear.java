@@ -1,22 +1,41 @@
-/*To. ê°œë°œìžë‹˜
-ì—°ë„ë¥¼ ë„£ìœ¼ë©´ ìœ¤ë…„ì¸ì§€ ì•„ë‹Œì§€ë¥¼ íŒë‹¨í•˜ëŠ” í”„ë¡œê·¸ëž¨ì´ í•„ìš”í•©ë‹ˆë‹¤.
-ìž…ë ¥ì°½ì— 2000 ì´ë¼ê³  ë„£ìœ¼ë©´ 2000ë…„ì€ ìœ¤ë…„ìž…ë‹ˆë‹¤. ì´ë ‡ê²Œ ì¶œë ¥í•˜ëŠ” ì–´í”Œ ë§ìž…ë‹ˆë‹¤.
-ë¡œì§ì€ ì•„ëž˜ì™€ ê°™ë‹¤ê³  í•˜ë‹ˆ ì°¸ì¡°í•˜ì‹œêµ¬ìš”. ë¶€íƒë“œë¦½ë‹ˆë‹¤.
+/*
+ * To. °³¹ßÀÚ´Ô
+¿¬µµ¸¦ ³ÖÀ¸¸é À±³âÀÎÁö ¾Æ´ÑÁö¸¦ ÆÇ´ÜÇÏ´Â ÇÁ·Î±×·¥ÀÌ ÇÊ¿äÇÕ´Ï´Ù.
+ÀÔ·ÂÃ¢¿¡ 2000 ÀÌ¶ó°í ³ÖÀ¸¸é 2000³âÀº À±³âÀÔ´Ï´Ù. ÀÌ·¸°Ô Ãâ·ÂÇÏ´Â ¾îÇÃ ¸»ÀÔ´Ï´Ù.
+·ÎÁ÷Àº ¾Æ·¡¿Í °°´Ù°í ÇÏ´Ï ÂüÁ¶ÇÏ½Ã±¸¿ä. ºÎÅ¹µå¸³´Ï´Ù.
 
-ì—°ë„ë¥¼ 4ë¡œ ë‚˜ëˆˆê°’ì´ 0 ì´ë¼ë©´ ìœ¤ë…„ì¼ ìˆ˜ ìžˆë‹¤.
-ê·¸ëŸ¬ë‚˜ í•´ë‹¹ ì—°ìˆ˜ê°€ 100ìœ¼ë¡œ ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ë©´ í‰ë…„ì´ë‹¤.
-2000ë…„ì€ 4ë¡œ ë‚˜ëˆˆê°’ì´ 0 ì´ë¼ì„œ ìœ¤ë…„ì¼ ìˆ˜ ìžˆëŠ”ë°..
-ë‹¤ì‹œ ì´ ê°’ì´ 100ìœ¼ë¡œ ë‚˜ëˆ  ë–¨ì–´ì§€ë©´ í‰ë…„ì´ë‹¤.
-í‰ë…„ì´ë¼ í•´ë„ ë‹¤ì‹œ 400ìœ¼ë¡œ ë‚˜ëˆ  ë–¨ì–´ì§€ëŠ” ì—°ë„ëŠ” ìœ¤ë…„ì´ë‹¤.
-ì˜ˆì‹œ) 2000ë…„ ê³¼ 2016 ë…„ì„ ìž…ë ¥í•˜ë©´ ìœ¤ë…„ìœ¼ë¡œ ë‚˜ì˜´       
-*/
-package homeworks02;
+¿¬µµ¸¦ 4·Î ³ª´«°ªÀÌ 0 ÀÌ¶ó¸é À±³âÀÏ ¼ö ÀÖ´Ù.
+±×·¯³ª ÇØ´ç ¿¬¼ö°¡ 100À¸·Î ³ª´©¾î ¶³¾îÁö¸é Æò³âÀÌ´Ù.
+2000³âÀº 4·Î ³ª´«°ªÀÌ 0 ÀÌ¶ó¼­ À±³âÀÏ ¼ö ÀÖ´Âµ¥..
+´Ù½Ã ÀÌ °ªÀÌ 100À¸·Î ³ª´² ¶³¾îÁö¸é Æò³âÀÌ´Ù.
+Æò³âÀÌ¶ó ÇØµµ ´Ù½Ã 400À¸·Î ³ª´² ¶³¾îÁö´Â ¿¬µµ´Â À±³âÀÌ´Ù.
+¿¹½Ã) 2000³â °ú 2016 ³âÀ» ÀÔ·ÂÇÏ¸é À±³âÀ¸·Î ³ª¿È
+ */
+package HomeWorks02;
+
+import java.util.Scanner;
 
 public class LeapYear {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		System.out.println("À±³â ÆÇ´Ü ÇÁ·Î±×·¥");
+		System.out.println("¿¬µµ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		int year = scan.nextInt();
+		String eval = "";
 
+		if(year%4==0){
+			eval = "À±³â";
+			 if(year%100==0) {
+				eval = "Æò³â";
+				if(year%400==0){
+					eval = "À±³â";
+			} else { 
+				eval = "Æò³â";}
+				
+			}
+		} 
+		System.out.println(year +"³âÀº" + eval +"ÀÔ´Ï´Ù.");
+		}
+		
 	}
-
-}

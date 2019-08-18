@@ -1,39 +1,70 @@
-/*to. ê°œë°œìë‹˜
-ì—¬ê¸°ëŠ” ë¹„íŠ¸í—¬ìŠ¤ ì…ë‹ˆë‹¤.
-ì…ë ¥ë°›ì„ ì •ë³´ëŠ” ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.
-ê°’ì„ ì…ë ¥ë°›ì€ í›„ì— ë‹¤ì‹œ ì…ë ¥ë°›ì€ ê°’ì„ ê·¸ëŒ€ë¡œ ë³´ì—¬ì£¼ëŠ”
-í”„ë¡œê·¸ë¨ì„ ë³´ì—¬ì£¼ì„¸ìš”
+/*
+ * to. °³¹ßÀÚ´Ô
+¿©±â´Â ºñÆ®Çï½º ÀÔ´Ï´Ù.
+ÀÔ·Â¹ŞÀ» Á¤º¸´Â ¾Æ·¡¿Í °°½À´Ï´Ù.
+°ªÀ» ÀÔ·Â¹ŞÀº ÈÄ¿¡ ´Ù½Ã ÀÔ·Â¹ŞÀº °ªÀ» ±×´ë·Î º¸¿©ÁÖ´Â
+ÇÁ·Î±×·¥À» º¸¿©ÁÖ¼¼¿ä
 
-=== íšŒì›ê°€ì… ===
-ì•„ì´ë”” : 
-ë¹„ë°€ë²ˆí˜¸ : 
-ì´ë¦„ : 
-ìƒë…„ì›”ì¼(ì˜ˆ) 1980-01-01 : 
-ì„±ì¸ì—¬ë¶€(ì„±ì¸true,ë¯¸ì„±ë…„false) : 
-í‚¤(ì†Œìˆ˜ì  ì²«ì§¸ìë¦¬ê¹Œì§€) :
-ëª¸ë¬´ê²Œ(ì†Œìˆ˜ì  ì²«ì§¸ìë¦¬ê¹Œì§€) : 
-í˜ˆì•¡í˜•(A) : 
+=== È¸¿ø°¡ÀÔ ===
+¾ÆÀÌµğ : 
+ºñ¹Ğ¹øÈ£ : 
+ÀÌ¸§ : 
+»ı³â¿ùÀÏ(¿¹) 1980-01-01 : 
+¼ºÀÎ¿©ºÎ(¼ºÀÎtrue,¹Ì¼º³âfalse) : 
+Å°(¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®±îÁö) :
+¸ö¹«°Ô(¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®±îÁö) : 
+Ç÷¾×Çü(A) : 
 
-ì…ë ¥ì´ ì¢…ë£Œë˜ë©´ ...ì•„ë˜ì²˜ëŸ¼ ë³´ì´ê²Œ í•´ì£¼ì„¸ìš”
+ÀÔ·ÂÀÌ Á¾·áµÇ¸é ...¾Æ·¡Ã³·³ º¸ÀÌ°Ô ÇØÁÖ¼¼¿ä
 
-=== íšŒì›ì •ë³´ ===
-ì•„ì´ë”” : hong
-ë¹„ë°€ë²ˆí˜¸ : 1234
-ì´ë¦„ : í™ê¸¸ë™
-ìƒë…„ì›”ì¼(ì˜ˆ) 1990-05-05 : 
-ì„±ì¸ì—¬ë¶€(ì„±ì¸true,ë¯¸ì„±ë…„false) : ì„±ì¸
-í‚¤(ì†Œìˆ˜ì  ì²«ì§¸ìë¦¬ê¹Œì§€) : 178.5 cm
-ëª¸ë¬´ê²Œ(ì†Œìˆ˜ì  ì²«ì§¸ìë¦¬ê¹Œì§€) : 75kg
-í˜ˆì•¡í˜•(A) : Bí˜•
+=== È¸¿øÁ¤º¸ ===
+¾ÆÀÌµğ : hong
+ºñ¹Ğ¹øÈ£ : 1234
+ÀÌ¸§ : È«±æµ¿
+»ı³â¿ùÀÏ(¿¹) 1990-05-05 : 
+¼ºÀÎ¿©ºÎ(¼ºÀÎtrue,¹Ì¼º³âfalse) : ¼ºÀÎ
+Å°(¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®±îÁö) : 178.5 cm
+¸ö¹«°Ô(¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®±îÁö) : 75kg
+Ç÷¾×Çü(A) : BÇü
 
-*/
-package homeworks02;
+ */
+
+package HomeWorks02;
+
+import java.util.Scanner;
 
 public class Join {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Á¤º¸¸¦ ÀÔ·ÂÇØÁÖ½Ê½Ã¿À.");
+		System.out.println("¾ÆÀÌµğ :");
+		String id = scan.next();
+		System.out.println("ºñ¹Ğ¹øÈ£ :");
+		String pass = scan.next();
+		System.out.println("ÀÌ¸§ :");
+		String name = scan.next();
+		System.out.println("»ı³â¿ùÀÏ(¿¹ : 1990-05-05) :");
+		String bd = scan.next();
+		System.out.println("¼ºÀÎ¿©ºÎ(¼ºÀÎtrue,¹Ì¼º³âfalse) : ");
+		String grow = scan.next();
+		System.out.println("Å°(¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®±îÁö) :");
+		Float height = scan.nextFloat();
+		System.out.println("¸ö¹«°Ô(¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®±îÁö) :");
+		Float weight = scan.nextFloat();
+		System.out.println("Ç÷¾×Çü(A) :");
+		String blood = scan.next();
 
+		System.out.println("=== È¸¿øÁ¤º¸ ===");
+		System.out.println("¾ÆÀÌµğ :" + id);
+		System.out.println("ºñ¹Ğ¹øÈ£ :" + pass);
+		System.out.println("ÀÌ¸§ :" + name);
+		System.out.println("»ı³â¿ùÀÏ(¿¹ : 1990-05-05) :" + bd);
+		System.out.println("¼ºÀÎ¿©ºÎ(¼ºÀÎtrue,¹Ì¼º³âfalse) : " + grow );
+		System.out.println("Å°(¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®±îÁö) :" + height +"cm");
+		System.out.println("¸ö¹«°Ô(¼Ò¼öÁ¡ Ã¹Â°ÀÚ¸®±îÁö) :" + weight + "kg");
+		System.out.println("Ç÷¾×Çü(A) :" + blood);
+		
 	}
 
 }

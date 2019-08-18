@@ -1,26 +1,28 @@
-/*
- *  To. ê°œë°œìžë‹˜
-       * í”„ë¡œê·¸ëž¨ì„ í•˜ë‚˜ ê°œë°œí•´ì•¼ í•©ë‹ˆë‹¤.
-       * êµìˆ˜ëŠ” í•™ìƒê³¼ êµ­ì–´, ì˜ì–´, ìˆ˜í•™ì ìˆ˜ë§Œ ìž…ë ¥í•˜ë©´
-       * ì´ì , í‰ê· , í•©ê²©ì—¬ë¶€ê°€ ì¶œë ¥ë˜ëŠ” í”„ë¡œê·¸ëž¨ ìž…ë‹ˆë‹¤.
-       * ì˜¤ë”ëŠ” ë‹¤ìŒê³¼ ê°™ì´ í™”ë©´ì— ì¶œë ¥í•˜ë¼ê³  í•©ë‹ˆë‹¤.
-       * í•™ìƒ           êµ­ì–´        ì˜ì–´        ìˆ˜í•™        ì´ì         í‰ê·         í•©ê²©ì—¬ë¶€
-       * =======================================================
-       * í™ê¸¸ë™     90       90      90     270      90       (ìž¥í•™ìƒ)
-       * í•©ê²©ì—¬ë¶€ëŠ” ë‹¤ìŒê³¼ ê°™ë‹¤ê³  í•©ë‹ˆë‹¤.
-       * í‰ê· ì´ 90ì  ì´ìƒì´ë©´ ìž¥í•™ìƒ
-       * 70ì  ì´ìƒ 90ì ë¯¸ë§Œ ì´ë©´ í•©ê²©
-       * 70ë¯¸ë§Œì´ë©´ ë¶ˆí•©ê²©ì´ë¼ê³  í•˜ë„¤ìš”.
-       * ë‹¨) í‰ê· ì—ì„œ ì†Œìˆ˜ì ì´í•˜ëŠ” ì ˆì‚­ìž…ë‹ˆë‹¤.
+package HomeWorks02;
 
- */
-package homeworks02;
+import java.util.Scanner;
 
 public class PassOrFail {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+		Scanner scan = new Scanner(System.in);
 
+		System.out.println("ÇÐ»ýÀÌ¸§°ú ±¹¾î, ¿µ¾î, ¼öÇÐ Á¡¼ö¸¦ Â÷·Ê´ë·Î ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		String name = scan.next();
+		int kor = scan.nextInt(), math =scan.nextInt() , eng = scan.nextInt();
+		int sum = kor + math + eng;
+		int avg =  sum / 3;
+
+			if(avg>=70){
+				System.out.println("ÇÐ»ý           ±¹¾î        ¿µ¾î        ¼öÇÐ        ÃÑÁ¡        Æò±Õ        ÇÕ°Ý¿©ºÎ");
+				System.out.println(" =======================================================");
+				System.out.println(name    +    kor     +  math    + eng       + sum     + avg        + "(ÇÕ°Ý)");
+			}
+			else if(avg<=69) {
+				System.out.println("ÇÐ»ý           ±¹¾î        ¿µ¾î        ¼öÇÐ        ÃÑÁ¡        Æò±Õ        ÇÕ°Ý¿©ºÎ");
+				System.out.println(" =======================================================");
+				System.out.println(name    +     kor     +  math    + eng       + sum     + avg        + "(ºÒÇÕ°Ý)");
+			} 
+		}	
 }

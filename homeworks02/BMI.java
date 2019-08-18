@@ -1,27 +1,93 @@
-/* To. ê°œë°œìžë‹˜
-ì‚¬ëžŒì˜ ì´ë¦„ì„ ìž…ë ¥í•˜ê³ , ëª¸ë¬´ê²Œ , í‚¤ë¥¼ ìž…ë ¥í•˜ë©´
-í•´ë‹¹ ì‚¬ëžŒì˜ ìƒíƒœê°€ ë¹„ë§Œì¸ì§€ ì €ì²´ì¤‘ì¸ì§€ ì•Œë ¤ì£¼ëŠ” BMI ì§€ìˆ˜ ì¸¡ì •í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ë§Œë“¤ì–´ ì£¼ì„¸ìš”.
-BMI êµ¬í•˜ëŠ” ê³µì‹ì€ ì•„ëž˜ì™€ ê°™ì•„ìš”. ë” ê¶ê¸ˆí•˜ë©´ ì—¬ê¸°ë¥¼ í´ë¦­í•˜ì„¸ìš”.
+
+/*
+
+ *  To. °³¹ßÀÚ´Ô
+
+»ç¶÷ÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ°í, ¸ö¹«°Ô , Å°¸¦ ÀÔ·ÂÇÏ¸é
+
+ÇØ´ç »ç¶÷ÀÇ »óÅÂ°¡ ºñ¸¸ÀÎÁö ÀúÃ¼ÁßÀÎÁö ¾Ë·ÁÁÖ´Â BMI Áö¼ö ÃøÁ¤ÇÏ´Â ÇÁ·Î±×·¥À» ¸¸µé¾î ÁÖ¼¼¿ä.
+
+BMI ±¸ÇÏ´Â °ø½ÄÀº ¾Æ·¡¿Í °°¾Æ¿ä. ´õ ±Ã±ÝÇÏ¸é ¿©±â¸¦ Å¬¸¯ÇÏ¼¼¿ä.
+
        BMI = x KG / (y M * y M)
 
+ 
+
 Example for 175 cm height and 70 kg weight:
+
 BMI = 70 / (1.75 * 1.75) = 22.86
 
-(bmi > 30.0) ê³ ë„ë¹„ë§Œ
-(bmi > 25.0) ë¹„ë§Œ
-(bmi > 23.0) ê³¼ì²´ì¤‘
-(bmi > 18.5) ì •ìƒ
-ì €ì²´ì¤‘
-       ì´ëžë‹ˆë‹¤.
-       */
+ 
 
-package homeworks02;
+(bmi > 30.0) °íµµºñ¸¸
+
+(bmi > 25.0) ºñ¸¸
+
+(bmi > 23.0) °úÃ¼Áß
+
+(bmi > 18.5) Á¤»ó
+
+ÀúÃ¼Áß
+
+       ÀÌ¶ø´Ï´Ù.
+
+ 
+
+ */
+
+package HomeWorks02;
+
+import java.util.Scanner;
 
 public class BMI {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("BMI  Áö¼ö ÃøÁ¤");
+
+		System.out.println("ÀÌ¸§");
+
+		String name = scan.next();
+
+		System.out.println("¸ö¹«°Ô");
+
+		int weight = scan.nextInt();
+
+		System.out.println("Å°");
+
+		float height = scan.nextInt();
+
+		float bmi = weight / (height /100 * height/100);
+
+		String eval = "";
+
+		if (bmi>30.0) {
+
+			eval = "°íµµºñ¸¸";
+
+		} else if (bmi>25.0) {
+
+			eval = "ºñ¸¸";
+
+		} else if (bmi>23.0) {
+
+			eval = "°úÃ¼Áß";
+
+		} else if (bmi>18.5){
+
+			eval = "Á¤»ó";
+
+		} else if(bmi<18.5){
+
+			eval = "ÀúÃ¼Áß";
+
+		}
+
+		else {System.out.println("½Ã½ºÅÛ ¿À·ù");}
+
+		System.out.println(name + "´ÔÀº" + eval + "ÀÔ´Ï´Ù");
 
 	}
-
 }

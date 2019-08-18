@@ -1,21 +1,85 @@
-/*To. ê°œë°œìë‹˜
-í”„ë¡œê·¸ë¨ì„ í•˜ë‚˜ ê°œë°œí•´ì•¼ í•©ë‹ˆë‹¤.
-êµìˆ˜ê°€ ìš”ì²­í•˜ê¸°ë¥¼ ë¸Œë¼ìš°ì €ì—ì„œ ì‚¬ìš©í•  ê³„ì‚°ê¸°ë¥¼ ë§Œë“¤ì–´ ë‹¬ëë‹ˆë‹¤.
-ë³µì¡í•  í•„ìš”ëŠ” ì—†ê³ , ì‚¬ì¹™ì—°ì‚° ê°€ëŠ¥í•˜ê³  ë‚˜ëˆ—ì…ˆì€
-ëª«ê³¼ ë‚˜ë¨¸ì§€ê°’ìœ¼ë¡œ ì¶œë ¥í•˜ë©´ ëœë‹µë‹ˆë‹¤.
-ì¶œë ¥ê²°ê³¼ë¬¼ì€ ì˜ˆë¥¼ ë“¤ì–´
+/*
+
+ * To. °³¹ßÀÚ´Ô
+
+ÇÁ·Î±×·¥À» ÇÏ³ª °³¹ßÇØ¾ß ÇÕ´Ï´Ù.
+
+±³¼ö°¡ ¿äÃ»ÇÏ±â¸¦ ºê¶ó¿ìÀú¿¡¼­ »ç¿ëÇÒ °è»ê±â¸¦ ¸¸µé¾î ´Ş¶ø´Ï´Ù.
+
+º¹ÀâÇÒ ÇÊ¿ä´Â ¾ø°í, »çÄ¢¿¬»ê °¡´ÉÇÏ°í ³ª´°¼ÀÀº
+
+¸ò°ú ³ª¸ÓÁö°ªÀ¸·Î Ãâ·ÂÇÏ¸é µÈ´ä´Ï´Ù.
+
+Ãâ·Â°á°ú¹°Àº ¿¹¸¦ µé¾î
+
 5 + 5 = 10
+
 2 - 7 = -5
-ì´ë ‡ê²Œ ë˜ê³ ,
-10 / 3 = 3 [1] ë‚˜ëˆ—ì…ˆì€ ì´ë ‡ê²Œ ë‚˜ì˜¤ë©´ ëœë‹µë‹ˆë‹¤.
-ê·¸ëŸ¬ë©´ []ê°’ì´ ë‚˜ë¨¸ì§€ì¸ì§€ëŠ” êµìˆ˜ê°€ ì´ë¯¸ ì•Œê³  ìˆê² ë‹µë‹ˆë‹¤.
-*/
-package homeworks02;
+
+ÀÌ·¸°Ô µÇ°í,
+
+10 / 3 = 3 [1] ³ª´°¼ÀÀº ÀÌ·¸°Ô ³ª¿À¸é µÈ´ä´Ï´Ù.
+
+±×·¯¸é []°ªÀÌ ³ª¸ÓÁöÀÎÁö´Â ±³¼ö°¡ ÀÌ¹Ì ¾Ë°í ÀÖ°Ú´ä´Ï´Ù.
+
+ */
+
+package HomeWorks02;
+import java.util.Scanner;
 
 public class ArithmeticCalculator {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("1. + |n 2. - |n  3. / |n 4. *");
+
+		int op = scan.nextInt();
+
+		System.out.println("°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+
+		System.out.println("Ã¹¹øÂ° °ª");
+
+		int first  = scan.nextInt();
+
+		System.out.println("µÎ¹øÂ° °ª");
+
+		int sec = scan.nextInt();
+
+		int eval = 0;
+
+		int frag = 0;
+
+		int result = 0;
+
+		if (op==1){
+
+			eval =  first + sec;
+
+			System.out.println( first + " + " + sec + " = " + eval);
+
+		} else if (op==2){
+
+			eval = first - sec;
+
+			System.out.println( first + " - " + sec + " = " + eval);
+
+		} else if (op==3){
+
+			eval = first / sec;
+
+			result = first % sec;
+
+         System.out.println( first + " / " + sec + " = " + eval + "[" + result + "]");
+
+		} else if (op==4){
+
+			eval = first * sec;
+
+			System.out.println( first + " * " + sec + " = " + eval);
+
+		} else {System.out.println("¿À·ùÀÔ´Ï´Ù");}
 
 	}
 

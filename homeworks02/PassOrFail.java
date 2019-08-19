@@ -1,4 +1,4 @@
-package HomeWorks02;
+package homeworks02;
 
 import java.util.Scanner;
 
@@ -8,21 +8,21 @@ public class PassOrFail {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("ÇÐ»ýÀÌ¸§°ú ±¹¾î, ¿µ¾î, ¼öÇÐ Á¡¼ö¸¦ Â÷·Ê´ë·Î ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		System.out.println("ï¿½Ð»ï¿½ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê´ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 		String name = scan.next();
 		int kor = scan.nextInt(), math =scan.nextInt() , eng = scan.nextInt();
 		int sum = kor + math + eng;
 		int avg =  sum / 3;
 
 			if(avg>=70){
-				System.out.println("ÇÐ»ý           ±¹¾î        ¿µ¾î        ¼öÇÐ        ÃÑÁ¡        Æò±Õ        ÇÕ°Ý¿©ºÎ");
+				System.out.println("ï¿½Ð»ï¿½           ï¿½ï¿½ï¿½ï¿½        ï¿½ï¿½ï¿½ï¿½        ï¿½ï¿½ï¿½ï¿½        ï¿½ï¿½ï¿½ï¿½        ï¿½ï¿½ï¿½        ï¿½Õ°Ý¿ï¿½ï¿½ï¿½");
 				System.out.println(" =======================================================");
-				System.out.println(name    +    kor     +  math    + eng       + sum     + avg        + "(ÇÕ°Ý)");
+				System.out.println(name    +    kor     +  math    + eng       + sum     + avg        + "(ï¿½Õ°ï¿½)");
 			}
 			else if(avg<=69) {
-				System.out.println("ÇÐ»ý           ±¹¾î        ¿µ¾î        ¼öÇÐ        ÃÑÁ¡        Æò±Õ        ÇÕ°Ý¿©ºÎ");
+				System.out.println("ï¿½Ð»ï¿½           ï¿½ï¿½ï¿½ï¿½        ï¿½ï¿½ï¿½ï¿½        ï¿½ï¿½ï¿½ï¿½        ï¿½ï¿½ï¿½ï¿½        ï¿½ï¿½ï¿½        ï¿½Õ°Ý¿ï¿½ï¿½ï¿½");
 				System.out.println(" =======================================================");
-				System.out.println(name    +     kor     +  math    + eng       + sum     + avg        + "(ºÒÇÕ°Ý)");
+				System.out.println(name    +     kor     +  math    + eng       + sum     + avg        + "(ï¿½ï¿½ï¿½Õ°ï¿½)");
 			} 
 		}	
 }

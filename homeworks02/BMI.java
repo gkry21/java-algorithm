@@ -1,93 +1,54 @@
 
 /*
 
- *  To. °³¹ßÀÚ´Ô
-
-»ç¶÷ÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ°í, ¸ö¹«°Ô , Å°¸¦ ÀÔ·ÂÇÏ¸é
-
-ÇØ´ç »ç¶÷ÀÇ »óÅÂ°¡ ºñ¸¸ÀÎÁö ÀúÃ¼ÁßÀÎÁö ¾Ë·ÁÁÖ´Â BMI Áö¼ö ÃøÁ¤ÇÏ´Â ÇÁ·Î±×·¥À» ¸¸µé¾î ÁÖ¼¼¿ä.
-
-BMI ±¸ÇÏ´Â °ø½ÄÀº ¾Æ·¡¿Í °°¾Æ¿ä. ´õ ±Ã±İÇÏ¸é ¿©±â¸¦ Å¬¸¯ÇÏ¼¼¿ä.
-
+ 
+/*
+ *  To. ê°œë°œìë‹˜
+ì‚¬ëŒì˜ ì´ë¦„ì„ ì…ë ¥í•˜ê³ , ëª¸ë¬´ê²Œ , í‚¤ë¥¼ ì…ë ¥í•˜ë©´
+í•´ë‹¹ ì‚¬ëŒì˜ ìƒíƒœê°€ ë¹„ë§Œì¸ì§€ ì €ì²´ì¤‘ì¸ì§€ ì•Œë ¤ì£¼ëŠ” BMI ì§€ìˆ˜ ì¸¡ì •í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ë§Œë“¤ì–´ ì£¼ì„¸ìš”.
+BMI êµ¬í•˜ëŠ” ê³µì‹ì€ ì•„ë˜ì™€ ê°™ì•„ìš”. ë” ê¶ê¸ˆí•˜ë©´ ì—¬ê¸°ë¥¼ í´ë¦­í•˜ì„¸ìš”.
        BMI = x KG / (y M * y M)
-
  
-
 Example for 175 cm height and 70 kg weight:
-
 BMI = 70 / (1.75 * 1.75) = 22.86
-
  
-
-(bmi > 30.0) °íµµºñ¸¸
-
-(bmi > 25.0) ºñ¸¸
-
-(bmi > 23.0) °úÃ¼Áß
-
-(bmi > 18.5) Á¤»ó
-
-ÀúÃ¼Áß
-
-       ÀÌ¶ø´Ï´Ù.
-
+(bmi > 30.0) ê³ ë„ë¹„ë§Œ
+(bmi > 25.0) ë¹„ë§Œ
+(bmi > 23.0) ê³¼ì²´ì¤‘
+(bmi > 18.5) ì •ìƒ
+ì €ì²´ì¤‘
+       ì´ëë‹ˆë‹¤.
  
-
  */
 
-package HomeWorks02;
-
+package homeworks02;
 import java.util.Scanner;
 
 public class BMI {
-
 	public static void main(String[] args) {
-
 		Scanner scan = new Scanner(System.in);
-
-		System.out.println("BMI  Áö¼ö ÃøÁ¤");
-
-		System.out.println("ÀÌ¸§");
-
+		System.out.println("BMI  ì§€ìˆ˜ ì¸¡ì •");
+		System.out.println("ì´ë¦„");
 		String name = scan.next();
-
-		System.out.println("¸ö¹«°Ô");
-
+		System.out.println("ëª¸ë¬´ê²Œ");
 		int weight = scan.nextInt();
-
-		System.out.println("Å°");
-
+		System.out.println("í‚¤");
 		float height = scan.nextInt();
-
 		float bmi = weight / (height /100 * height/100);
-
 		String eval = "";
-
 		if (bmi>30.0) {
-
-			eval = "°íµµºñ¸¸";
-
+			eval = "ê³ ë„ë¹„ë§Œ";
 		} else if (bmi>25.0) {
-
-			eval = "ºñ¸¸";
-
+			eval = "ë¹„ë§Œ";
 		} else if (bmi>23.0) {
-
-			eval = "°úÃ¼Áß";
-
+			eval = "ê³¼ì²´ì¤‘";
 		} else if (bmi>18.5){
-
-			eval = "Á¤»ó";
-
+			eval = "ì •ìƒ";
 		} else if(bmi<18.5){
-
-			eval = "ÀúÃ¼Áß";
-
+			eval = "ì €ì²´ì¤‘";
 		}
 
-		else {System.out.println("½Ã½ºÅÛ ¿À·ù");}
-
-		System.out.println(name + "´ÔÀº" + eval + "ÀÔ´Ï´Ù");
-
+		else {System.out.println("ì‹œìŠ¤í…œ ì˜¤ë¥˜");}
+		System.out.println(name + "ë‹˜ì€" + eval + "ì…ë‹ˆë‹¤");
 	}
 }

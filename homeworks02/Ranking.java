@@ -1,102 +1,57 @@
 /*
-
- * To. °³¹ßÀÚ´Ô
-
-ÀúÈñ´Â ºñÆ®¿Ã¸²ÇÈ À§¿øÈ¸ÀÔ´Ï´Ù.
-
-ÇÑ¹øÀÇ Æ®·¢¿¡¼­ À°»ó¼±¼ö´Â ÃÑ 3¸í ÀÔ´Ï´Ù.
-
-ÃÑ ¼¼¸íÀÇ 100m ±â·ÏÀ» ÀÔ·Â¹Ş¾Æ¼­ 
-
-1, 2, 3 µîÀ» °¡·Á¾ß ÇÕ´Ï´Ù.
-
+ * To. ê°œë°œìë‹˜
+ì €í¬ëŠ” ë¹„íŠ¸ì˜¬ë¦¼í”½ ìœ„ì›íšŒì…ë‹ˆë‹¤.
+í•œë²ˆì˜ íŠ¸ë™ì—ì„œ ìœ¡ìƒì„ ìˆ˜ëŠ” ì´ 3ëª… ì…ë‹ˆë‹¤.
+ì´ ì„¸ëª…ì˜ 100m ê¸°ë¡ì„ ì…ë ¥ë°›ì•„ì„œ 
+1, 2, 3 ë“±ì„ ê°€ë ¤ì•¼ í•©ë‹ˆë‹¤.
  
-
-A ¼±¼ö ±â·Ï : 10.5ÃÊ
-
-B ¼±¼ö ±â·Ï : 10.8ÃÊ
-
-C ¼±¼ö ±â·Ï : 10.1ÃÊ 
-
-¶ó°í ÀÔ·Â¹Ş¾Ò´Ù¸é
-
+A ì„ ìˆ˜ ê¸°ë¡ : 10.5ì´ˆ
+B ì„ ìˆ˜ ê¸°ë¡ : 10.8ì´ˆ
+C ì„ ìˆ˜ ê¸°ë¡ : 10.1ì´ˆ 
+ë¼ê³  ì…ë ¥ë°›ì•˜ë‹¤ë©´
  
-
-###### ¼ºÀû ·©Å· #######
-
+###### ì„±ì  ë­í‚¹ #######
  
-
-1µî : C ¼±¼ö ±â·Ï (10.1ÃÊ)
-
-2µî : A ¼±¼ö ±â·Ï (10.5ÃÊ)
-
-3µî : B ¼±¼ö ±â·Ï (10.8ÃÊ)
-
+1ë“± : C ì„ ìˆ˜ ê¸°ë¡ (10.1ì´ˆ)
+2ë“± : A ì„ ìˆ˜ ê¸°ë¡ (10.5ì´ˆ)
+3ë“± : B ì„ ìˆ˜ ê¸°ë¡ (10.8ì´ˆ)
  
-
-¶ó°í Ãâ·Â½ÃÄÑÁÖ¼¼¿ä.
-
+ë¼ê³  ì¶œë ¥ì‹œì¼œì£¼ì„¸ìš”.
  
-
  */
 
-package HomeWorks02;
+package homeworks02;
 import java.util.Scanner;
 
 public class Ranking {
 
-   // int ¹è¿­ [3] , for ¹è¿­ÀÇ ¼ıÀÚ ÀÛÀº¼ø¼­´ë·Î 
-
 	public static void main(String[] args) {
-
 		Scanner scan = new Scanner(System.in);
 
- 
-
-		System.out.println("±â·ÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
-
-		System.out.println("A¼±¼ö");
-
+		System.out.println("ê¸°ë¡ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
+		System.out.println("Aì„ ìˆ˜");
 		float a = scan.nextInt();
-
-		System.out.println("B¼±¼ö");
-
+		System.out.println("Bì„ ìˆ˜");
 		float b = scan.nextInt();
-
-		System.out.println("C¼±¼ö");
-
+		System.out.println("Cì„ ìˆ˜");
 		float c = scan.nextInt();
-
 		float[] rank = {a, b, c};
 
-		
-
 		for(int i  = 0; i < rank.length  ; i++ ){
-
-			
-
 			int tmp = i; 
-
 			float value = rank[i]; 
 
 			for(int j = i+1; j < rank.length; j++) {
-
 				if(rank[tmp] > rank[j] ) {
-
 					float value2 = rank[j]; 
-
 					rank[tmp] = value2;
-
 					rank[j] = value;      
-
 				}
-
 			}
 		}
 
 		for(int i  =0; i < rank.length  ; i++ ){
-
-			System.out.println(i+1+"µî:" + rank[i]);
+			System.out.println(i+1+"ë“±:" + rank[i]);
 		}
 	}
 

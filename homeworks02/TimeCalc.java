@@ -16,7 +16,6 @@ public class TimeCalc {
 	public static void main(String[] args) {
 	Scanner scan = new Scanner(System.in);
 	System.out.println("초를 입력하세요");
-
 	int sec = scan.nextInt();
 	int hh = 0;
 	int mm = 0;
@@ -25,7 +24,7 @@ public class TimeCalc {
 	mm= sec / 60;
 	ss = sec - (mm*60);
 	hh = mm / 60;
-	mm = (hh*60);
+	mm = mm - (hh*60);
  
 	System.out.println(hh + "시간" + mm + "분" + ss + "초");
 

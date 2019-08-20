@@ -14,7 +14,18 @@ public class Engine {
 			System.out.println("0. 종료 1. AC 2. BMI 3.HowMuch  4.Join  5. LeapYear 6. MonthEndDay 7. PassOrFail 8. Ranking 9.ReportCard 10.ScoreCalc 11. Tax 12. TimeCalc ");
 			switch(scan.nextInt()) {
 		case 0 : System.out.println("종료"); return;
-		case 1 : break;
+		case 1 : 
+			System.out.println("연산자를 선택하세요.1. + |n 2. - |n  3. / |n 4. *");
+			int op = scan.nextInt();
+			System.out.println("값을 입력해주세요");
+			System.out.println("첫번째 값");
+			int first  = scan.nextInt();
+			System.out.println("두번째 값");
+			int sec = scan.nextInt();
+			
+			String result = student.getAC(op,first,sec);
+			System.out.println(result);
+			break;
 		case 2 : 
 			System.out.println("BMI");  
 			System.out.println("BMI  지수 측정");
@@ -27,7 +38,7 @@ public class Engine {
 			String result2 = student.getBmi(name2,weight2, height2 );
 			System.out.println(result2);
 			break; 
-		case 3 :  break;
+//		case 3 :  break;
 		case 4 : 
 			System.out.println("회원가입해주세요.");
 			System.out.println("아이디 :");
@@ -54,7 +65,7 @@ public class Engine {
 			System.out.println("궁금한 연도를 입력해주세요");
 			int year = scan.nextInt();
 			String result5 = student.getLeap(year);
-			System.out.println(year +"년은"+result5 + "입니다.");
+			System.out.println(result5);
 			break;
 		case 6 : 
 			System.out.println("궁금한 월을 입력해주세요");
@@ -63,10 +74,10 @@ public class Engine {
 			String result6 = student.getMonthEndDay(month);
 			System.out.println(result6);
 			break;
-		case 7 :  break;
-		case 8 :  
-		
-			break;
+//		case 7 :  break;
+//		case 8 :  
+//		
+//			break;
 		case 9 :  
 			System.out.println("학생이름과 국어, 영어, 수학 점수를 차례대로 입력해주세요");
 			String name9 = scan.next();
@@ -75,7 +86,7 @@ public class Engine {
 			String result9 = student.getReportCard(name9,kor,math,eng);
 			break;
 		case 10 :  
-			while(true) {
+			while(true) { 
 				System.out.println("점수 계산기, 더하시려는 숫자를 입력하세요(종료는 -1)");
 				int num = scan.nextInt();
 				int sum = 0, cnt=0,avg=0;
@@ -90,21 +101,19 @@ public class Engine {
 			break;
 		case 11 : 
 			System.out.println("세금 계산기");
-			System.out.println("세율을 입력해주세요");
-			float taxrate = scan.nextFloat();
 			System.out.println("이름을 입력해주세요");
 			String name11 = scan.next();
 			System.out.println("연봉을 입력해주세요");
 			int pay = scan.nextInt();
-			String result11 = student.getTax(taxrate, name11, pay);
+			String result11 = student.getTax(name11, pay);
 			System.out.println(result11);
 			break;
 		case 12 : 
 			System.out.println("시간 계산기");
 			System.out.println("초를 입력해주세요");
-			int sec = scan.nextInt();
-			int ss = 0, mm=0,hh=0;
-			String result12 = student.getTimeCalc(sec, ss,mm,hh);
+			int sec12 = scan.nextInt();
+			int ss12 = 0, mm12=0,hh12=0;
+			String result12 = student.getTimeCalc(sec12, ss12,mm12,hh12);
 			System.out.println(result12);
 			
 			break;

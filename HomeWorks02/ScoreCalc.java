@@ -53,7 +53,6 @@ public class ScoreCalc {
 		} else {
 			text += "+" + String.valueOf(num);
 		}
-
 		cnt ++;
 
 	}

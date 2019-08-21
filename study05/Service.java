@@ -1,6 +1,6 @@
 package study05;
 
-public class Service {
+public class Service { // 필드의 의미는 2개, 땅을 의미하는 필드와, 멤버변수를 의미하는 필드. 
 	
 	public String getBmi(Member member) {
 		String result = "";

@@ -3,9 +3,12 @@ package homeworks04_grade;
 public class Grade {
 	private String name;
 	private int kor,eng,math;
-	
-	public String setName(String name) {
+
+	public  void setName(String name) {
 		this.name = name;
+	}
+	public String getName(){
+		return this.name;
 	}
 	public void setKor(int kor) {
 		this.kor = kor;
@@ -29,6 +32,6 @@ public class Grade {
 		return String.format("국어점수 : %d \n"
 				+ "영어점수 : %d \n"
 				+ "수학점수 : %d \n",kor,eng,math);
-		
 	}
+
 }
